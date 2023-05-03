@@ -1,6 +1,5 @@
 package sheetmusiceditor;
 
-
 import javax.swing.JPanel;
 
 import app.JApplication;
@@ -34,20 +33,6 @@ public class SheetMusicEditorApplication extends JApplication
     ImageLoader.loadImages();
 
     SheetMusicPaper visual = new SheetMusicPaper();
-    
-//    Visualization visual = new Visualization();
-//    visual.add(new QuarterRest(60, 60));
-
-//    Measure measure = new Measure(20, 20);
-//
-//    visual.add(measure);
-//
-//    visual.add(new QuarterNote(measure.getX() + .1666666 * measure.getWidth(),
-//        measure.getY() + Measure.Positions.LOW_F.getHeight(), Measure.MEASURE_MARGIN_HEIGHT,
-//        Color.black));
-    // measure.getBounds2D(true).getMinX() + measure.getWidth() / 4.0,
-    // measure.getBounds2D(true).getMinY() + Measure.Positions.A.getHeight(),
-    // Measure.MEASURE_MARGIN_HEIGHT)
 
     VisualizationView visualView = visual.getView();
 
@@ -59,8 +44,7 @@ public class SheetMusicEditorApplication extends JApplication
     mediaBar.setBounds(0, 0, WIDTH, 20);
     mediaBar.addActionListener(visual);
     
-    contentPane.add(mediaBar);    
-
+    contentPane.add(mediaBar);
   }
 
   /**
@@ -73,6 +57,5 @@ public class SheetMusicEditorApplication extends JApplication
   {
     JApplication app = new SheetMusicEditorApplication(args);
     invokeInEventDispatchThread(app);
-    
   }
 }
